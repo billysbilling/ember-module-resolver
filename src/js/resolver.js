@@ -1,6 +1,6 @@
-module.exports = function(rootDir) {
+module.exports = function(jsRootDir, templatesRootDir) {
     var resolveTemplate = function(parsedName) {
-        var moduleName = rootDir+'/templates/'+normalizeTemplateName(parsedName.name);
+        var moduleName = templatesRootDir+'/'+normalizeTemplateName(parsedName.name);
         return require(moduleName, true);
     };
 
@@ -11,12 +11,12 @@ module.exports = function(rootDir) {
             return null;
         }
         if (fullName === 'router:main') {
-            return require(rootDir+'/router');
+            return require(jsRootDir+'/router');
         }
 
         var type = parsedName.type,
             name = parsedName.name,
-            moduleName = rootDir+'/'+type+'s/'+normalizeOtherName(name);
+            moduleName = jsRootDir+'/'+type+'s/'+normalizeOtherName(name);
 
         if (type === 'util') {
             return null;
