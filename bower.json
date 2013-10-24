@@ -2,11 +2,10 @@
   "name": "ember-module-resolver",
   "version": "0.0.1",
   "homepage": "https://github.com/billysbilling/ember-module-resolver",
-  "main": "src/js/REPLACE-ME.js",
+  "main": "src/js/resolver.js",
   "billy-builder": {
     "include": [
-      "src/js",
-      "src/templates"
+      "src/js"
     ]
   },
   "license": "MIT",
