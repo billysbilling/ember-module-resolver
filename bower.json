@@ -1,6 +1,6 @@
 {
   "name": "ember-module-resolver",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "homepage": "https://github.com/billysbilling/ember-module-resolver",
   "main": "src/js/resolver.js",
   "billy-builder": {
