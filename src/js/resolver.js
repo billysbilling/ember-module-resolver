@@ -18,10 +18,6 @@ module.exports = function(jsRootDir, templatesRootDir) {
             name = parsedName.name,
             moduleName = jsRootDir+'/'+type+'s/'+normalizeOtherName(name);
 
-        if (type === 'util') {
-            return null;
-        }
-
         return require(moduleName, true);
     };
 
@@ -50,7 +46,7 @@ module.exports = function(jsRootDir, templatesRootDir) {
         name = name.replace(/\./g, '-');
         return name;
     };
-    
+
     return Ember.DefaultResolver.extend({
         resolveTemplate: resolveTemplate,
         resolveOther: resolveOther,
